@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setBaseGround() {
         db = FirebaseDatabase.getInstance();
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser().getUid();
     }
